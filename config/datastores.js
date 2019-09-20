@@ -13,6 +13,10 @@
  * https://sailsjs.com/config/datastores
  */
 
+ //Load environmental variables
+require('dotenv').config();
+
+
 module.exports.datastores = {
 
 
@@ -31,7 +35,7 @@ module.exports.datastores = {
   * (For production configuration, see `config/env/production.js`.)          *
   *                                                                          *
   ***************************************************************************/
-
+  
   default: {
 
     /***************************************************************************
@@ -48,8 +52,9 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    // adapter: 'sails-mysql',
-    // url: 'mysql://user:password@host:port/database',
+    adapter: 'sails-postgresql',    
+    url: `postgresql://${process.env.USER}:${process.env.PASSWORD}@localhost:${process.env.PORT}/${process.env.DATABASE}`
+    //ssl: true
 
   },
 
