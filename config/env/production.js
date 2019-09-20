@@ -251,7 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://default-sails-app.herokuapp.com',
+      'https://dagosailstestapp.herokuapp.com/',
     //  'https://example.com',
     //   'https://staging.example.com',
     ],
